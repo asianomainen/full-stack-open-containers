@@ -1,0 +1,9 @@
+Script started on 2022-12-07 17:51:34+02:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="200" LINES="57"]
+asianomainen@QTC:~/Documents/full-stack-open-containers/script-answers$ dockerostarti-ircompetent_mirzakhani
+root@60c1fafdba32:/# nano /usr/src/app/index.js
+root@60c1fafdba32:/#Bexit/src/app/index.jsABBAB[eWriting...c]BB/BB[eWrotea1clineB]BB^OBaWritemOutBM-PB^WBeWhereBIsBBBroB^KBNCutBB^TBFExecuteB^CBhLocationWord^BM-UB Undo BM-AB Set Mark	   BM-]B To Bracket  BM-QB Previous    B^BB BackB^LeftB Prev WordBXB Exit  B^RB Read File    B^\B ReplaceB^UB Paste B^JB JustifyB^/B Go To Line	  BM-EB Redo BM-6B CopyB^QB Where Was	 BM-WB Next B^FB ForwardB^RightB Next Word
+exit
+asianomainen@QTC:~/Documents/full-stack-open-containers/script-answers$ exit
+exit
+
+Script done on 2022-12-07 17:52:37+02:00 [COMMAND_EXIT_CODE="0"]
