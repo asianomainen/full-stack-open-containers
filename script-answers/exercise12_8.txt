@@ -1,0 +1,205 @@
+docker compose -f docker-compose.dev.yml up
+[+] Running 2/2
+ ⠿ Network todo-backend_default    Created                                                                                          0.0s
+ ⠿ Container todo-backend-mongo-1  Created                                                                                          0.1s
+Attaching to todo-backend-mongo-1
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:19:19.807+00:00"},"s":"I",  "c":"NETWORK",  "id":4915701, "ctx":"main","msg":"Initialized wire specification","attr":{"spec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":17},"incomingInternalClient":{"minWireVersion":0,"maxWireVersion":17},"outgoing":{"minWireVersion":6,"maxWireVersion":17},"isInternalClient":true}}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:19:19.807+00:00"},"s":"I",  "c":"CONTROL",  "id":23285,   "ctx":"main","msg":"Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:19:19.809+00:00"},"s":"I",  "c":"NETWORK",  "id":4648601, "ctx":"main","msg":"Implicit TCP FastOpen unavailable. If TCP FastOpen is required, set tcpFastOpenServer, tcpFastOpenClient, and tcpFastOpenQueueSize."}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:19:19.810+00:00"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"main","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"TenantMigrationDonorService","namespace":"config.tenantMigrationDonors"}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:19:19.810+00:00"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"main","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"TenantMigrationRecipientService","namespace":"config.tenantMigrationRecipients"}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:19:19.810+00:00"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"main","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"ShardSplitDonorService","namespace":"config.tenantSplitDonors"}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:19:19.810+00:00"},"s":"I",  "c":"CONTROL",  "id":5945603, "ctx":"main","msg":"Multi threading initialized"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:19:19.810+00:00"},"s":"I",  "c":"CONTROL",  "id":4615611, "ctx":"initandlisten","msg":"MongoDB starting","attr":{"pid":1,"port":27017,"dbPath":"/data/db","architecture":"64-bit","host":"8f2e7ea8604c"}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:19:19.810+00:00"},"s":"I",  "c":"CONTROL",  "id":23403,   "ctx":"initandlisten","msg":"Build Info","attr":{"buildInfo":{"version":"6.0.3","gitVersion":"f803681c3ae19817d31958965850193de067c516","openSSLVersion":"OpenSSL 1.1.1f  31 Mar 2020","modules":[],"allocator":"tcmalloc","environment":{"distmod":"ubuntu2004","distarch":"x86_64","target_arch":"x86_64"}}}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:19:19.810+00:00"},"s":"I",  "c":"CONTROL",  "id":51765,   "ctx":"initandlisten","msg":"Operating System","attr":{"os":{"name":"Ubuntu","version":"20.04"}}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:19:19.810+00:00"},"s":"I",  "c":"CONTROL",  "id":21951,   "ctx":"initandlisten","msg":"Options set by command line","attr":{"options":{"net":{"bindIp":"*"},"security":{"authorization":"enabled"}}}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:19:19.811+00:00"},"s":"I",  "c":"STORAGE",  "id":22270,   "ctx":"initandlisten","msg":"Storage engine to use detected by data files","attr":{"dbpath":"/data/db","storageEngine":"wiredTiger"}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:19:19.811+00:00"},"s":"I",  "c":"STORAGE",  "id":22297,   "ctx":"initandlisten","msg":"Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem","tags":["startupWarnings"]}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:19:19.811+00:00"},"s":"I",  "c":"STORAGE",  "id":22315,   "ctx":"initandlisten","msg":"Opening WiredTiger","attr":{"config":"create,cache_size=7416M,session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,remove=true,path=journal,compressor=snappy),builtin_extension_config=(zstd=(compression_level=6)),file_manager=(close_idle_time=600,close_scan_interval=10,close_handle_minimum=2000),statistics_log=(wait=0),json_output=(error,message),verbose=[recovery_progress:1,checkpoint_progress:1,compact_progress:1,backup:0,checkpoint:0,compact:0,evict:0,history_store:0,recovery:0,rts:0,salvage:0,tiered:0,timestamp:0,transaction:0,verify:0,log:0],"}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:19:20.470+00:00"},"s":"I",  "c":"STORAGE",  "id":4795906, "ctx":"initandlisten","msg":"WiredTiger opened","attr":{"durationMillis":659}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:19:20.470+00:00"},"s":"I",  "c":"RECOVERY", "id":23987,   "ctx":"initandlisten","msg":"WiredTiger recoveryTimestamp","attr":{"recoveryTimestamp":{"$timestamp":{"t":0,"i":0}}}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:19:20.473+00:00"},"s":"W",  "c":"CONTROL",  "id":5123300, "ctx":"initandlisten","msg":"vm.max_map_count is too low","attr":{"currentValue":65530,"recommendedMinimum":1677720,"maxConns":838860},"tags":["startupWarnings"]}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:19:20.475+00:00"},"s":"I",  "c":"NETWORK",  "id":4915702, "ctx":"initandlisten","msg":"Updated wire specification","attr":{"oldSpec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":17},"incomingInternalClient":{"minWireVersion":0,"maxWireVersion":17},"outgoing":{"minWireVersion":6,"maxWireVersion":17},"isInternalClient":true},"newSpec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":17},"incomingInternalClient":{"minWireVersion":17,"maxWireVersion":17},"outgoing":{"minWireVersion":17,"maxWireVersion":17},"isInternalClient":true}}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:19:20.475+00:00"},"s":"I",  "c":"REPL",     "id":5853300, "ctx":"initandlisten","msg":"current featureCompatibilityVersion value","attr":{"featureCompatibilityVersion":"6.0","context":"startup"}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:19:20.475+00:00"},"s":"I",  "c":"STORAGE",  "id":5071100, "ctx":"initandlisten","msg":"Clearing temp directory"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:19:20.476+00:00"},"s":"I",  "c":"CONTROL",  "id":20536,   "ctx":"initandlisten","msg":"Flow Control is enabled on this deployment"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:19:20.477+00:00"},"s":"I",  "c":"FTDC",     "id":20625,   "ctx":"initandlisten","msg":"Initializing full-time diagnostic data capture","attr":{"dataDirectory":"/data/db/diagnostic.data"}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:19:20.479+00:00"},"s":"I",  "c":"REPL",     "id":6015317, "ctx":"initandlisten","msg":"Setting new configuration state","attr":{"newState":"ConfigReplicationDisabled","oldState":"ConfigPreStart"}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:19:20.479+00:00"},"s":"I",  "c":"STORAGE",  "id":22262,   "ctx":"initandlisten","msg":"Timestamp monitor starting"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:19:20.479+00:00"},"s":"I",  "c":"NETWORK",  "id":23015,   "ctx":"listener","msg":"Listening on","attr":{"address":"/tmp/mongodb-27017.sock"}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:19:20.479+00:00"},"s":"I",  "c":"NETWORK",  "id":23015,   "ctx":"listener","msg":"Listening on","attr":{"address":"0.0.0.0"}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:19:20.479+00:00"},"s":"I",  "c":"NETWORK",  "id":23016,   "ctx":"listener","msg":"Waiting for connections","attr":{"port":27017,"ssl":"off"}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:20:04.979+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"127.0.0.1:43502","uuid":"fc2e894c-586b-435f-a72d-c0afdac4ff74","connectionId":1,"connectionCount":1}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:20:04.983+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn1","msg":"client metadata","attr":{"remote":"127.0.0.1:43502","client":"conn1","doc":{"driver":{"name":"nodejs|mongosh","version":"4.12.1"},"os":{"type":"Linux","name":"linux","architecture":"x64","version":"5.15.0-57-generic"},"platform":"Node.js v16.17.0, LE (unified)","version":"4.12.1|1.6.1","application":{"name":"mongosh 1.6.1"}}}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:20:04.987+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"127.0.0.1:43514","uuid":"b1a44bf8-fd53-4be7-88ef-973e5a7cc249","connectionId":2,"connectionCount":2}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:20:04.988+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn2","msg":"client metadata","attr":{"remote":"127.0.0.1:43514","client":"conn2","doc":{"driver":{"name":"nodejs|mongosh","version":"4.12.1"},"os":{"type":"Linux","name":"linux","architecture":"x64","version":"5.15.0-57-generic"},"platform":"Node.js v16.17.0, LE (unified)","version":"4.12.1|1.6.1","application":{"name":"mongosh 1.6.1"}}}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:20:04.993+00:00"},"s":"I",  "c":"ACCESS",   "id":20250,   "ctx":"conn2","msg":"Authentication succeeded","attr":{"mechanism":"SCRAM-SHA-256","speculative":true,"principalName":"root","authenticationDatabase":"admin","remote":"127.0.0.1:43514","extraInfo":{}}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:20:05.001+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"127.0.0.1:43530","uuid":"82ea9a1f-e4dc-4935-a838-f4115e42e017","connectionId":3,"connectionCount":3}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:20:05.001+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"127.0.0.1:43544","uuid":"3ea5ac15-c5d9-4b7f-8442-1a9ecce8fa9b","connectionId":4,"connectionCount":4}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:20:05.002+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn3","msg":"client metadata","attr":{"remote":"127.0.0.1:43530","client":"conn3","doc":{"driver":{"name":"nodejs|mongosh","version":"4.12.1"},"os":{"type":"Linux","name":"linux","architecture":"x64","version":"5.15.0-57-generic"},"platform":"Node.js v16.17.0, LE (unified)","version":"4.12.1|1.6.1","application":{"name":"mongosh 1.6.1"}}}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:20:05.003+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn4","msg":"client metadata","attr":{"remote":"127.0.0.1:43544","client":"conn4","doc":{"driver":{"name":"nodejs|mongosh","version":"4.12.1"},"os":{"type":"Linux","name":"linux","architecture":"x64","version":"5.15.0-57-generic"},"platform":"Node.js v16.17.0, LE (unified)","version":"4.12.1|1.6.1","application":{"name":"mongosh 1.6.1"}}}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:20:05.004+00:00"},"s":"I",  "c":"ACCESS",   "id":20250,   "ctx":"conn3","msg":"Authentication succeeded","attr":{"mechanism":"SCRAM-SHA-256","speculative":true,"principalName":"root","authenticationDatabase":"admin","remote":"127.0.0.1:43530","extraInfo":{}}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:20:05.004+00:00"},"s":"I",  "c":"ACCESS",   "id":20250,   "ctx":"conn4","msg":"Authentication succeeded","attr":{"mechanism":"SCRAM-SHA-256","speculative":true,"principalName":"root","authenticationDatabase":"admin","remote":"127.0.0.1:43544","extraInfo":{}}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:20:11.737+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"127.0.0.1:43546","uuid":"d82ccddb-1ef2-421a-b405-b7739334e029","connectionId":5,"connectionCount":5}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:20:11.737+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"127.0.0.1:43550","uuid":"f9290392-c286-474b-aecd-01d735f58236","connectionId":6,"connectionCount":6}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:20:11.740+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn5","msg":"client metadata","attr":{"remote":"127.0.0.1:43546","client":"conn5","doc":{"driver":{"name":"nodejs|mongosh","version":"4.12.1"},"os":{"type":"Linux","name":"linux","architecture":"x64","version":"5.15.0-57-generic"},"platform":"Node.js v16.17.0, LE (unified)","version":"4.12.1|1.6.1","application":{"name":"mongosh 1.6.1"}}}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:20:11.741+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn6","msg":"client metadata","attr":{"remote":"127.0.0.1:43550","client":"conn6","doc":{"driver":{"name":"nodejs|mongosh","version":"4.12.1"},"os":{"type":"Linux","name":"linux","architecture":"x64","version":"5.15.0-57-generic"},"platform":"Node.js v16.17.0, LE (unified)","version":"4.12.1|1.6.1","application":{"name":"mongosh 1.6.1"}}}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:20:11.742+00:00"},"s":"I",  "c":"ACCESS",   "id":20250,   "ctx":"conn5","msg":"Authentication succeeded","attr":{"mechanism":"SCRAM-SHA-256","speculative":true,"principalName":"root","authenticationDatabase":"admin","remote":"127.0.0.1:43546","extraInfo":{}}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:20:11.742+00:00"},"s":"I",  "c":"ACCESS",   "id":20250,   "ctx":"conn6","msg":"Authentication succeeded","attr":{"mechanism":"SCRAM-SHA-256","speculative":true,"principalName":"root","authenticationDatabase":"admin","remote":"127.0.0.1:43550","extraInfo":{}}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:20:15.488+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"127.0.0.1:57802","uuid":"59c3756d-6550-4957-be54-c4692643c4bf","connectionId":7,"connectionCount":7}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:20:15.489+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn7","msg":"client metadata","attr":{"remote":"127.0.0.1:57802","client":"conn7","doc":{"driver":{"name":"nodejs|mongosh","version":"4.12.1"},"os":{"type":"Linux","name":"linux","architecture":"x64","version":"5.15.0-57-generic"},"platform":"Node.js v16.17.0, LE (unified)","version":"4.12.1|1.6.1","application":{"name":"mongosh 1.6.1"}}}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:22.561+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"172.29.0.1:34902","uuid":"884fed79-3fbb-4889-8b40-14d6c3ac9519","connectionId":8,"connectionCount":8}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:22.564+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn8","msg":"client metadata","attr":{"remote":"172.29.0.1:34902","client":"conn8","doc":{"driver":{"name":"nodejs|Mongoose","version":"3.6.8"},"os":{"type":"Linux","name":"linux","architecture":"x64","version":"5.15.0-57-generic"},"platform":"'Node.js v18.12.1, LE (unified)","version":"3.6.8|5.13.2"}}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:22.567+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"172.29.0.1:34912","uuid":"ec83d5d1-32ec-4e79-aee3-fc25d4a4d265","connectionId":9,"connectionCount":9}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:22.568+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn9","msg":"client metadata","attr":{"remote":"172.29.0.1:34912","client":"conn9","doc":{"driver":{"name":"nodejs|Mongoose","version":"3.6.8"},"os":{"type":"Linux","name":"linux","architecture":"x64","version":"5.15.0-57-generic"},"platform":"'Node.js v18.12.1, LE (unified)","version":"3.6.8|5.13.2"}}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:22.572+00:00"},"s":"I",  "c":"ACCESS",   "id":20250,   "ctx":"conn9","msg":"Authentication succeeded","attr":{"mechanism":"SCRAM-SHA-256","speculative":true,"principalName":"the_username","authenticationDatabase":"the_database","remote":"172.29.0.1:34912","extraInfo":{}}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:27.670+00:00"},"s":"I",  "c":"-",        "id":20883,   "ctx":"conn8","msg":"Interrupted operation as its client disconnected","attr":{"opId":1576}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:27.670+00:00"},"s":"I",  "c":"NETWORK",  "id":22944,   "ctx":"conn9","msg":"Connection ended","attr":{"remote":"172.29.0.1:34912","uuid":"ec83d5d1-32ec-4e79-aee3-fc25d4a4d265","connectionId":9,"connectionCount":8}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:27.671+00:00"},"s":"I",  "c":"NETWORK",  "id":22944,   "ctx":"conn8","msg":"Connection ended","attr":{"remote":"172.29.0.1:34902","uuid":"884fed79-3fbb-4889-8b40-14d6c3ac9519","connectionId":8,"connectionCount":7}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:30.816+00:00"},"s":"I",  "c":"-",        "id":20883,   "ctx":"conn1","msg":"Interrupted operation as its client disconnected","attr":{"opId":1610}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:30.816+00:00"},"s":"I",  "c":"NETWORK",  "id":22944,   "ctx":"conn7","msg":"Connection ended","attr":{"remote":"127.0.0.1:57802","uuid":"59c3756d-6550-4957-be54-c4692643c4bf","connectionId":7,"connectionCount":6}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:30.816+00:00"},"s":"I",  "c":"NETWORK",  "id":22944,   "ctx":"conn1","msg":"Connection ended","attr":{"remote":"127.0.0.1:43502","uuid":"fc2e894c-586b-435f-a72d-c0afdac4ff74","connectionId":1,"connectionCount":5}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:30.817+00:00"},"s":"I",  "c":"NETWORK",  "id":22944,   "ctx":"conn6","msg":"Connection ended","attr":{"remote":"127.0.0.1:43550","uuid":"f9290392-c286-474b-aecd-01d735f58236","connectionId":6,"connectionCount":4}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:30.817+00:00"},"s":"I",  "c":"NETWORK",  "id":22944,   "ctx":"conn5","msg":"Connection ended","attr":{"remote":"127.0.0.1:43546","uuid":"d82ccddb-1ef2-421a-b405-b7739334e029","connectionId":5,"connectionCount":3}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:30.817+00:00"},"s":"I",  "c":"NETWORK",  "id":22944,   "ctx":"conn2","msg":"Connection ended","attr":{"remote":"127.0.0.1:43514","uuid":"b1a44bf8-fd53-4be7-88ef-973e5a7cc249","connectionId":2,"connectionCount":2}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:30.817+00:00"},"s":"I",  "c":"NETWORK",  "id":22944,   "ctx":"conn4","msg":"Connection ended","attr":{"remote":"127.0.0.1:43544","uuid":"3ea5ac15-c5d9-4b7f-8442-1a9ecce8fa9b","connectionId":4,"connectionCount":1}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:30.817+00:00"},"s":"I",  "c":"NETWORK",  "id":22944,   "ctx":"conn3","msg":"Connection ended","attr":{"remote":"127.0.0.1:43530","uuid":"82ea9a1f-e4dc-4935-a838-f4115e42e017","connectionId":3,"connectionCount":0}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.976+00:00"},"s":"I",  "c":"CONTROL",  "id":23377,   "ctx":"SignalHandler","msg":"Received signal","attr":{"signal":15,"error":"Terminated"}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.976+00:00"},"s":"I",  "c":"CONTROL",  "id":23378,   "ctx":"SignalHandler","msg":"Signal was sent by kill(2)","attr":{"pid":0,"uid":0}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.976+00:00"},"s":"I",  "c":"CONTROL",  "id":23381,   "ctx":"SignalHandler","msg":"will terminate after current cmd ends"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.976+00:00"},"s":"I",  "c":"REPL",     "id":4784900, "ctx":"SignalHandler","msg":"Stepping down the ReplicationCoordinator for shutdown","attr":{"waitTimeMillis":15000}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.976+00:00"},"s":"I",  "c":"REPL",     "id":4794602, "ctx":"SignalHandler","msg":"Attempting to enter quiesce mode"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.976+00:00"},"s":"I",  "c":"-",        "id":6371601, "ctx":"SignalHandler","msg":"Shutting down the FLE Crud thread pool"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.976+00:00"},"s":"I",  "c":"COMMAND",  "id":4784901, "ctx":"SignalHandler","msg":"Shutting down the MirrorMaestro"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.976+00:00"},"s":"I",  "c":"SHARDING", "id":4784902, "ctx":"SignalHandler","msg":"Shutting down the WaitForMajorityService"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.976+00:00"},"s":"I",  "c":"CONTROL",  "id":4784903, "ctx":"SignalHandler","msg":"Shutting down the LogicalSessionCache"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.976+00:00"},"s":"I",  "c":"NETWORK",  "id":20562,   "ctx":"SignalHandler","msg":"Shutdown: going to close listening sockets"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.976+00:00"},"s":"I",  "c":"NETWORK",  "id":23017,   "ctx":"listener","msg":"removing socket file","attr":{"path":"/tmp/mongodb-27017.sock"}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.976+00:00"},"s":"I",  "c":"NETWORK",  "id":4784905, "ctx":"SignalHandler","msg":"Shutting down the global connection pool"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.976+00:00"},"s":"I",  "c":"CONTROL",  "id":4784906, "ctx":"SignalHandler","msg":"Shutting down the FlowControlTicketholder"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.976+00:00"},"s":"I",  "c":"-",        "id":20520,   "ctx":"SignalHandler","msg":"Stopping further Flow Control ticket acquisitions."}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.976+00:00"},"s":"I",  "c":"CONTROL",  "id":4784908, "ctx":"SignalHandler","msg":"Shutting down the PeriodicThreadToAbortExpiredTransactions"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.976+00:00"},"s":"I",  "c":"REPL",     "id":4784909, "ctx":"SignalHandler","msg":"Shutting down the ReplicationCoordinator"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.976+00:00"},"s":"I",  "c":"SHARDING", "id":4784910, "ctx":"SignalHandler","msg":"Shutting down the ShardingInitializationMongoD"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.976+00:00"},"s":"I",  "c":"REPL",     "id":4784911, "ctx":"SignalHandler","msg":"Enqueuing the ReplicationStateTransitionLock for shutdown"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.976+00:00"},"s":"I",  "c":"-",        "id":4784912, "ctx":"SignalHandler","msg":"Killing all operations for shutdown"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.976+00:00"},"s":"I",  "c":"-",        "id":4695300, "ctx":"SignalHandler","msg":"Interrupted all currently running operations","attr":{"opsKilled":3}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.976+00:00"},"s":"I",  "c":"TENANT_M", "id":5093807, "ctx":"SignalHandler","msg":"Shutting down all TenantMigrationAccessBlockers on global shutdown"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.976+00:00"},"s":"I",  "c":"COMMAND",  "id":4784913, "ctx":"SignalHandler","msg":"Shutting down all open transactions"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.977+00:00"},"s":"I",  "c":"REPL",     "id":4784914, "ctx":"SignalHandler","msg":"Acquiring the ReplicationStateTransitionLock for shutdown"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.977+00:00"},"s":"I",  "c":"INDEX",    "id":4784915, "ctx":"SignalHandler","msg":"Shutting down the IndexBuildsCoordinator"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.977+00:00"},"s":"I",  "c":"NETWORK",  "id":4784918, "ctx":"SignalHandler","msg":"Shutting down the ReplicaSetMonitor"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.977+00:00"},"s":"I",  "c":"SHARDING", "id":4784921, "ctx":"SignalHandler","msg":"Shutting down the MigrationUtilExecutor"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.977+00:00"},"s":"I",  "c":"ASIO",     "id":22582,   "ctx":"MigrationUtil-TaskExecutor","msg":"Killing all outstanding egress activity."}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.977+00:00"},"s":"I",  "c":"COMMAND",  "id":4784923, "ctx":"SignalHandler","msg":"Shutting down the ServiceEntryPoint"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.977+00:00"},"s":"I",  "c":"CONTROL",  "id":4784925, "ctx":"SignalHandler","msg":"Shutting down free monitoring"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.977+00:00"},"s":"I",  "c":"CONTROL",  "id":20609,   "ctx":"SignalHandler","msg":"Shutting down free monitoring"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.977+00:00"},"s":"I",  "c":"CONTROL",  "id":4784927, "ctx":"SignalHandler","msg":"Shutting down the HealthLog"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.977+00:00"},"s":"I",  "c":"CONTROL",  "id":4784928, "ctx":"SignalHandler","msg":"Shutting down the TTL monitor"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.977+00:00"},"s":"I",  "c":"INDEX",    "id":3684100, "ctx":"SignalHandler","msg":"Shutting down TTL collection monitor thread"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.977+00:00"},"s":"I",  "c":"INDEX",    "id":3684101, "ctx":"SignalHandler","msg":"Finished shutting down TTL collection monitor thread"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.977+00:00"},"s":"I",  "c":"CONTROL",  "id":6278511, "ctx":"SignalHandler","msg":"Shutting down the Change Stream Expired Pre-images Remover"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.977+00:00"},"s":"I",  "c":"CONTROL",  "id":4784929, "ctx":"SignalHandler","msg":"Acquiring the global lock for shutdown"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.977+00:00"},"s":"I",  "c":"CONTROL",  "id":4784930, "ctx":"SignalHandler","msg":"Shutting down the storage engine"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.977+00:00"},"s":"I",  "c":"STORAGE",  "id":22320,   "ctx":"SignalHandler","msg":"Shutting down journal flusher thread"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.977+00:00"},"s":"I",  "c":"STORAGE",  "id":22321,   "ctx":"SignalHandler","msg":"Finished shutting down journal flusher thread"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.977+00:00"},"s":"I",  "c":"STORAGE",  "id":22322,   "ctx":"SignalHandler","msg":"Shutting down checkpoint thread"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.977+00:00"},"s":"I",  "c":"STORAGE",  "id":22323,   "ctx":"SignalHandler","msg":"Finished shutting down checkpoint thread"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.977+00:00"},"s":"I",  "c":"STORAGE",  "id":20282,   "ctx":"SignalHandler","msg":"Deregistering all the collections"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.977+00:00"},"s":"I",  "c":"STORAGE",  "id":22261,   "ctx":"SignalHandler","msg":"Timestamp monitor shutting down"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.977+00:00"},"s":"I",  "c":"STORAGE",  "id":22317,   "ctx":"SignalHandler","msg":"WiredTigerKVEngine shutting down"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.977+00:00"},"s":"I",  "c":"STORAGE",  "id":22318,   "ctx":"SignalHandler","msg":"Shutting down session sweeper thread"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.977+00:00"},"s":"I",  "c":"STORAGE",  "id":22319,   "ctx":"SignalHandler","msg":"Finished shutting down session sweeper thread"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.977+00:00"},"s":"I",  "c":"STORAGE",  "id":4795902, "ctx":"SignalHandler","msg":"Closing WiredTiger","attr":{"closeConfig":"leak_memory=true,"}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.983+00:00"},"s":"I",  "c":"STORAGE",  "id":4795901, "ctx":"SignalHandler","msg":"WiredTiger closed","attr":{"durationMillis":6}}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.983+00:00"},"s":"I",  "c":"STORAGE",  "id":22279,   "ctx":"SignalHandler","msg":"shutdown: removing fs lock..."}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.983+00:00"},"s":"I",  "c":"-",        "id":4784931, "ctx":"SignalHandler","msg":"Dropping the scope cache for shutdown"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.983+00:00"},"s":"I",  "c":"FTDC",     "id":20626,   "ctx":"SignalHandler","msg":"Shutting down full-time diagnostic data capture"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.985+00:00"},"s":"I",  "c":"CONTROL",  "id":20565,   "ctx":"SignalHandler","msg":"Now exiting"}
+todo-backend-mongo-1  | {"t":{"$date":"2023-01-10T13:21:39.985+00:00"},"s":"I",  "c":"CONTROL",  "id":23138,   "ctx":"SignalHandler","msg":"Shutting down","attr":{"exitCode":0}}
+todo-backend-mongo-1 exited with code 0
+
+
+docker container ls
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS                                         NAMES
+8f2e7ea8604c   mongo     "docker-entrypoint.s…"   26 seconds ago   Up 25 seconds   0.0.0.0:3456->27017/tcp, :::3456->27017/tcp   todo-backend-mongo-1
+
+
+docker exec -it todo-backend-mongo-1 bash
+
+
+root@8f2e7ea8604c:/# mongosh -u root -p example
+Current Mongosh Log ID:	63bd6604a8996353af5d03a5
+Connecting to:		mongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.6.1
+Using MongoDB:		6.0.3
+Using Mongosh:		1.6.1
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2023-01-10T13:19:19.811+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+   2023-01-10T13:19:20.473+00:00: vm.max_map_count is too low
+------
+
+------
+   Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+   metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+   The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+   and anyone you share the URL with. MongoDB may use this information to make product
+   improvements and to suggest MongoDB products and deployment options to you.
+
+   To enable free monitoring, run the following command: db.enableFreeMonitoring()
+   To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+------
+
+test> show dbs
+admin         100.00 KiB
+config         72.00 KiB
+local          72.00 KiB
+the_database   72.00 KiB
+test> use the_database
+switched to db the_database
+the_database> show collections
+todos
+the_database> db.todos.find({})
+[
+  {
+    _id: ObjectId("63bd56180876814ad3ef53d0"),
+    text: 'Write code',
+    done: true
+  },
+  {
+    _id: ObjectId("63bd56180876814ad3ef53d1"),
+    text: 'Learn about containers',
+    done: false
+  }
+]
+the_database> db.todos.insertOne({text: 'Increase the number of tools in my toolbelt', done: false})
+{
+  acknowledged: true,
+  insertedId: ObjectId("63bd6625d867b9ce8907152e")
+}
+the_database> db.todos.find({})
+[
+  {
+    _id: ObjectId("63bd56180876814ad3ef53d0"),
+    text: 'Write code',
+    done: true
+  },
+  {
+    _id: ObjectId("63bd56180876814ad3ef53d1"),
+    text: 'Learn about containers',
+    done: false
+  },
+  {
+    _id: ObjectId("63bd6625d867b9ce8907152e"),
+    text: 'Increase the number of tools in my toolbelt',
+    done: false
+  }
+]
+the_database> exit
+root@8f2e7ea8604c:/# exit
+exit
